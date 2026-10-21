@@ -1,14 +1,14 @@
-# Reverse Tableau 📊
+# dashboard-silo 📊
 
-> Open-source self-service Business Intelligence (BI) platform inspired by Tableau Desktop and Cloud. Built with React, TypeScript, Fastify, DuckDB, and Apache ECharts.
+> Open-source self-service Business Intelligence (BI) platform. Built with React, TypeScript, Fastify, DuckDB, and Apache ECharts.
 
-![Reverse Tableau Screenshot](web/src/assets/hero.png)
+![dashboard-silo Screenshot](web/src/assets/hero.png)
 
 ---
 
 ## 🌟 Overview
 
-**Reverse Tableau** is a modern, web-native analytical tool designed to bring the intuitive drag-and-drop workflow of Tableau directly to the browser. It translates visual shelf interactions into optimized SQL queries via a declarative **VizQL-like query compiler**, executed directly against **DuckDB** for blazing-fast in-process analytics.
+**dashboard-silo** is a modern, web-native analytical tool designed to bring an intuitive drag-and-drop BI workflow directly to the browser. It translates visual shelf interactions into optimized SQL queries via a declarative **analytical query compiler**, executed directly against **DuckDB** for blazing-fast in-process analytics.
 
 ---
 
@@ -21,7 +21,7 @@
   - 🟢 **Measures** (Numerical data: Integers, Decimals, Floats)
 - **Data Preview**: Inspect real-time preview tables with raw schema metadata.
 
-### 2. 🎛️ Tableau Shelf Interface
+### 2. 🎛️ Interactive Shelf Interface
 - **Columns & Rows Shelves**: Drag fields from the sidebar or double-click to place them onto visualization shelves.
 - **Aggregations & Granularity**:
   - Measures support configurable aggregations: `SUM`, `AVG`, `COUNT`, `MIN`, `MAX`.
@@ -43,7 +43,7 @@ Powered by **Apache ECharts** with a clean, high-contrast light theme:
 - **Heatmap**: 2D categorical density matrix with customizable gradient color ranges.
 
 ### 4. 🧮 Calculated Fields Engine
-A custom recursive-descent expression parser that converts human-readable Tableau formulas into safe DuckDB SQL queries without exposing raw SQL or arbitrary code execution:
+A custom recursive-descent expression parser that converts human-readable formulas into safe DuckDB SQL queries without exposing raw SQL or arbitrary code execution:
 - **Arithmetic**: `[penjualan] * [qty]`
 - **Logic & Branching**: `IF [penjualan] >= 30000 THEN "High" ELSEIF [penjualan] >= 15000 THEN "Medium" ELSE "Low" END`
 - **String & Date Functions**: `UPPER([produk]) & "-" & YEAR([tanggal])`
@@ -142,7 +142,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```text
-reverse-tableau/
+dashboard-silo/
 ├── sample.csv                 # Sample dataset for quick evaluation
 ├── server/                    # Fastify backend service
 │   ├── src/
@@ -176,7 +176,7 @@ reverse-tableau/
 
 ## 🗺️ Roadmap
 - [x] **Phase 1**: Authentication, multi-user workspace, CSV upload, DuckDB query execution, data preview.
-- [x] **Phase 2**: Shelf drag-and-drop interface, VizQL compiler, dynamic aggregations, auto-mark resolver (Bar, Line, Area, Scatter).
+- [x] **Phase 2**: Shelf drag-and-drop interface, query compiler, dynamic aggregations, auto-mark resolver (Bar, Line, Area, Scatter).
 - [x] **Phase 3**: Filters shelf, row-level calculated fields engine, new marks (Pie, Treemap, Heatmap), high-contrast light theme.
 - [ ] **Phase 4**: Multi-worksheet Dashboard Builder with cross-chart interactive click filters.
 - [ ] **Phase 5**: Direct external database connectors (PostgreSQL, MySQL, Snowflake).

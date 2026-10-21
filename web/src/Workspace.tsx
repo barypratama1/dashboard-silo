@@ -129,7 +129,7 @@ export default function Workspace({ email, onLogout }: { email: string; onLogout
       <div className="shell">
         <header className="topbar">
           <div className="brand">
-            Reverse <span>Tableau</span>
+            dashboard-<span>silo</span>
           </div>
           <div className="right">
             {email}

@@ -27,7 +27,7 @@ export default function Auth({ onAuth }: { onAuth: (email: string) => void }) {
   return (
     <main className="auth-wrap">
       <form className="auth-card" onSubmit={submit}>
-        <h1>Reverse Tableau</h1>
+        <h1>dashboard-silo</h1>
         <p>{mode === 'login' ? 'Masuk untuk melanjutkan' : 'Buat akun baru'}</p>
         <label>
           Email

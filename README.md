@@ -98,8 +98,8 @@ flowchart LR
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/barypratama1/reverse-tableau.git
-cd reverse-tableau
+git clone https://github.com/barypratama1/dashboard-silo.git
+cd dashboard-silo
 ```
 
 ### 2. Install Dependencies
